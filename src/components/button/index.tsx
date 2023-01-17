@@ -1,7 +1,7 @@
 import { ButtonProps } from "../../interfaces";
 
 const Button = (props: ButtonProps) => {
-  const { name, color, size, action } = props;
+  const { name, bgColor, color, size, action } = props;
   console.log("props", props);
 
   return (
@@ -12,22 +12,22 @@ const Button = (props: ButtonProps) => {
           ? {
               border: "none",
               width: "100%",
-              backgroundColor: "inherit",
-              color: "inherit",
+              backgroundColor: bgColor ? bgColor : "inherit",
+              color: color ? color : "inherit",
             }
           : size == "md"
           ? {
               border: "none",
               width: "70%",
-              backgroundColor: "inherit",
-              color: "inherit",
+              backgroundColor: bgColor ? bgColor : "inherit",
+              color: color ? color : "inherit",
             }
           : size == "sm"
           ? {
               border: "none",
               width: "50%",
-              backgroundColor: "inherit",
-              color: "inherit",
+              backgroundColor: bgColor ? bgColor : "inherit",
+              color: color ? color : "inherit",
             }
           : {}
       }

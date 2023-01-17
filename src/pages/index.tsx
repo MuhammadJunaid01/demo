@@ -1,6 +1,5 @@
 import MainLayoute from "@/components/layoutes";
 import { Inter } from "@next/font/google";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Head from "next/head";
 import { HomePage } from "../components/index";
 const inter = Inter({ subsets: ["latin"] });

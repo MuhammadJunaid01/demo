@@ -13,7 +13,7 @@ export interface ProductsProps {
     title: string;
   }[];
 }
-export interface ProductProps {
+export interface CardProps {
   id: 1;
   image: string;
   price: number;
@@ -21,9 +21,22 @@ export interface ProductProps {
   title: string;
   breakPoints?: { sm: number; md: number; lg: number };
 }
+export interface productProps {
+  product: {
+    category: string;
+    description: string;
+    id: 1;
+    image: string;
+    price: number;
+    rating: { rate: number; count: number };
+    title: string;
+  };
+}
 export interface ButtonProps {
   name: string;
-  color?: number;
+  color?: string;
   size: string;
+  bgColor?: string;
+
   action?: () => void;
 }
