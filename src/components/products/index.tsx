@@ -3,10 +3,6 @@ import { Container, Row } from "react-bootstrap";
 import { Card } from "../index";
 const Products = (props: ProductsProps) => {
   const { products } = props;
-  if (products == undefined) {
-    return <h1>Loading............</h1>;
-  }
-  console.log(products);
   return (
     <Container>
       <Row>
@@ -20,7 +16,7 @@ const Products = (props: ProductsProps) => {
                 image={image}
                 rating={rating}
                 title={title}
-                breakPoints={{ sm: 12, md: 4, lg: 3 }}
+                breakPoints={{ sm: 12, md: 6, lg: 3 }}
               />
             );
           }

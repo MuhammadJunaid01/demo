@@ -1,6 +1,13 @@
+import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 export interface MainLayOuteProps {
   children: ReactNode;
+}
+export interface HeroBannerProps {
+  image: string | StaticImageData;
+  button: ReactNode;
+  title: string;
+  heading: string;
 }
 export interface ProductsProps {
   products: {

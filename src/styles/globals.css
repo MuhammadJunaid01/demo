@@ -16,3 +16,28 @@
   background-color: #ffffff;
   font-family: Poppins, sans-serif;
 }
+
+.search_box {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 5px 7px;
+  border-radius: 20px;
+}
+.search_box > p {
+  margin: 0px;
+  cursor: pointer;
+}
+.search_box > input {
+  border: none;
+  outline: none;
+  transition: all 400ms ease-in-out;
+}
+.search_box > input:focus {
+  width: 300px;
+}
+.search_box > input::placeholder {
+  color: var(--color-secoundary);
+  font-size: 15px;
+}
