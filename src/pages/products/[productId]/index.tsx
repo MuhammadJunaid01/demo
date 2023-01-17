@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+import MainLayoute from "@/components/layoutes";
 import { useGetSingleProductQuery } from "@/redux/api";
 import { useRouter } from "next/router";
 import { Product } from "../../../components";
@@ -11,9 +12,9 @@ const index = () => {
   }
   return (
     <div>
-      <h1>hello daynamic page {productId}</h1>
-      <h1>{data.title}</h1>
-      <Product />
+      <MainLayoute>
+        <Product product={data} />
+      </MainLayoute>
     </div>
   );
 };

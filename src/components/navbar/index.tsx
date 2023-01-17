@@ -1,15 +1,22 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 const MenuBar = () => {
+  const router = useRouter();
+  const handleLink = () => {
+    router.push("/");
+  };
   return (
     <div>
       <Navbar expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#">Demo</Navbar.Brand>
+          <Navbar.Brand style={{ cursor: "pointer" }} onClick={handleLink}>
+            Demo
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
