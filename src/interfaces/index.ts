@@ -34,7 +34,9 @@ export interface productProps {
 }
 export interface ButtonProps {
   name: string;
-  color?: number;
+  color?: string;
   size: string;
+  bgColor?: string;
+
   action?: () => void;
 }
