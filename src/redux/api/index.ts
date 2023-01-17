@@ -11,6 +11,9 @@ export const productApi = createApi({
       query: () => "/products",
       providesTags: ["products"],
     }),
+    getSingleProduct: builder.query({
+      query: (id) => `/products/${id}`,
+    }),
   }),
 });
-export const { useGetProductQuery } = productApi;
+export const { useGetProductQuery, useGetSingleProductQuery } = productApi;
