@@ -1,4 +1,4 @@
-import { ProductProps } from "@/interfaces";
+import { CardProps } from "@/interfaces";
 import Image from "next/image";
 import Link from "next/link";
 import { Col } from "react-bootstrap";
@@ -7,7 +7,7 @@ import { Rating } from "react-simple-star-rating";
 import style from "../../styles/product.module.css";
 import { Button } from "../index";
 
-const Card = (props: ProductProps) => {
+const Card = (props: CardProps) => {
   const { breakPoints, image, title, rating, id } = props;
   return (
     <Col
