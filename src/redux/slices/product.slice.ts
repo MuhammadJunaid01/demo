@@ -1,6 +1,5 @@
 import { createSlice, current, PayloadAction } from "@reduxjs/toolkit";
 import { WritableDraft } from "immer/dist/internal";
-// import { createSlice } from "@reduxjs/toolkit";
 interface ProductType {
   products: {
     category: string;
@@ -42,7 +41,6 @@ export const productSlice = createSlice({
         return;
       }
       const vSta = current(state);
-      // const obj= Object.assign({}, ...array)
       action.payload.map(
         (
           data: WritableDraft<{
@@ -58,7 +56,6 @@ export const productSlice = createSlice({
           state.products.push(data);
         }
       );
-      console.log(vSta.products);
     },
     getSearch: (state, action) => {
       state.searchRes.splice(0, state.searchRes.length);
