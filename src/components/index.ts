@@ -1,3 +1,5 @@
+import Blog from "./blog";
+import Blogs from "./blogs";
 import Button from "./button";
 import Card from "./card";
 import CustomerSay from "./customer_say";
@@ -20,4 +22,6 @@ export {
   Loader,
   HeroBanner,
   CustomerSay,
+  Blogs,
+  Blog,
 };
