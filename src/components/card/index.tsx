@@ -8,7 +8,7 @@ import style from "../../styles/card.module.css";
 import { Button } from "../index";
 
 const Card = (props: CardProps) => {
-  const { breakPoints, image, title, rating, id } = props;
+  const { breakPoints, image, title, rating, id, price } = props;
   return (
     <Col
       style={{ marginBottom: "10px" }}
@@ -33,12 +33,22 @@ const Card = (props: CardProps) => {
               <FaShoppingCart style={{ backgroundColor: "inherit" }} />
               <Button name="Add To Cart" size="sm" />
             </div>
-            <div style={styleIn.rating}>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "space-between",
+                margin: "6px 0px",
+              }}
+            >
               <Rating size={15} readonly initialValue={rating.rate} />
               <p style={{ margin: "0px", color: "#cccccc" }}>
                 ({rating.count} Reviews)
               </p>
             </div>
+            <p style={styleIn.title}>{title.slice(0, 20)}</p>
+            <p style={{ margin: "2px 0px" }}>${price}</p>
           </div>
           <div className={style.wish_list}>
             <p style={styleIn.wishIcon}>
@@ -67,12 +77,12 @@ const styleIn = {
     justifyContent: "center",
     alignItems: "center",
   },
-  rating: {
-    display: "flex",
-    flexWrap: "wrap",
-    alignItems: "center",
-    justifyContent: "space-between",
-    margin: "6px 0px",
+  title: {
+    margin: "0px",
+    fontSize: "14px",
+    lineHeight: "18px",
+    fontWeight: "400",
+    color: "var( --color-primary)",
   },
 };
 export default Card;

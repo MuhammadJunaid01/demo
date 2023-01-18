@@ -13,7 +13,7 @@
 .card_image {
   position: relative;
   width: 90%;
-  height: 200px;
+  height: 180px;
   border-radius: 10px;
 }
 .card_body {
@@ -21,7 +21,7 @@
   position: relative;
 }
 .card_btn {
-  transform: translateY(240%);
+  transform: translateY(370%);
   transform-origin: bottom;
   background-color: #333333;
   color: white;
