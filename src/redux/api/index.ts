@@ -13,6 +13,7 @@ export const productApi = createApi({
     }),
     getSingleProduct: builder.query({
       query: (id) => `/products/${id}`,
+      providesTags: ["products"],
     }),
   }),
 });
