@@ -2,7 +2,6 @@ import { ButtonProps } from "../../interfaces";
 
 const Button = (props: ButtonProps) => {
   const { name, bgColor, color, size, action } = props;
-  console.log("props", props);
 
   return (
     <button

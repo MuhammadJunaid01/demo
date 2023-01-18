@@ -1,5 +1,6 @@
 import Button from "./button";
 import Card from "./card";
+import CustomerSay from "./customer_say";
 import Footer from "./footer";
 import HeroBanner from "./heroBanner";
 import HomePage from "./home";
@@ -18,4 +19,5 @@ export {
   Product,
   Loader,
   HeroBanner,
+  CustomerSay,
 };

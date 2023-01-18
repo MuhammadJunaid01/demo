@@ -19,6 +19,9 @@ export interface ProductsProps {
     rating: { rate: number; count: number };
     title: string;
   }[];
+  heading: string;
+  isLoading: boolean;
+  tabsData: { name: string }[];
 }
 export interface CardProps {
   id: 1;

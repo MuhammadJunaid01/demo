@@ -7,7 +7,7 @@
 }
 .content {
   position: absolute;
-  top: 32%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, 50%);
   background-color: transparent;
@@ -17,4 +17,24 @@
 .content h4 {
   background-color: transparent;
   color: white;
+}
+.hero_image {
+  width: 651px;
+  height: 370px;
+  cursor: pointer;
+}
+.btn {
+  width: 60%;
+  margin: 0 auto;
+  background-color: transparent;
+  color: white;
+  border-bottom: 1px solid white;
+  margin-top: 10px;
+  padding: 5px 0px;
+}
+.btn:hover {
+  background-color: var(--color-orange-300);
+}
+.hero_image:hover {
+  filter: blur(2px);
 }

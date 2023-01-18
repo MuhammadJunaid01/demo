@@ -41,3 +41,10 @@
   color: var(--color-secoundary);
   font-size: 15px;
 }
+
+.tab0:hover {
+  border-bottom: 1px solid var(--color-primary);
+}
+.tab1:hover {
+  border-bottom: 1px solid var(--color-primary);
+}
