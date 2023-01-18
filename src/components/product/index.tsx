@@ -1,6 +1,7 @@
 import { productProps } from "@/interfaces";
+import Head from "next/head";
+
 import Image from "next/image";
-import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { FaRegHeart, FaShoppingCart } from "react-icons/fa";
 import { Rating } from "react-simple-star-rating";
@@ -9,10 +10,16 @@ import style from "../../styles/product.module.css";
 import { Button } from "../index";
 const Product = (props: productProps) => {
   const { title, image, rating, price, description } = props.product;
-  const [hover, setHover] = useState(false);
 
   return (
     <div style={{ padding: "50px 0px" }}>
+      <Head>
+        <title>{title} - My Store</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:image" content={image} />
+        <meta property="og:description" content={description} />
+      </Head>
       <Container>
         <Row>
           <Col sm={12} md={7} lg={7}>
@@ -41,10 +48,7 @@ const Product = (props: productProps) => {
               <p style={styleIn.price}>${price}</p>
               <p style={styleIn.description}>{description}</p>
               <div style={styleIn.btnContainer}>
-                <div
-                  className={style.btnBox}
-                  // style={style.bntBox}
-                >
+                <div className={style.btnBox}>
                   <p style={{ margin: "0px", backgroundColor: "inherit" }}>
                     <FaShoppingCart style={styleIn.icon} />
                   </p>
