@@ -21,7 +21,7 @@
   position: relative;
 }
 .card_btn {
-  transform: translateY(180%);
+  transform: translateY(240%);
   transform-origin: bottom;
   background-color: #333333;
   color: white;

@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { FaSearch } from "react-icons/fa";
 const MenuBar = () => {
+  const [show, setShow] = useState(false);
   const router = useRouter();
   const handleLink = () => {
     router.push("/");
@@ -35,7 +38,12 @@ const MenuBar = () => {
                 PAGES
               </Link>
             </Nav>
-            <div className="d-flex"></div>
+            <div className="search_box">
+              <input type="text" placeholder="Search in..." />
+              <p onClick={() => setShow((prev) => !prev)}>
+                <FaSearch />
+              </p>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

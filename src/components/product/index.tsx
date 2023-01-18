@@ -31,7 +31,7 @@ const Product = (props: productProps) => {
           </Col>
           <Col sm={12} md={5} lg={5}>
             <div>
-              <h4 style={styleIn.title}>hello product {title}</h4>
+              <h4 style={styleIn.title}> {title}</h4>
               <div className="d-flex gap-2">
                 <Rating size={15} readonly initialValue={rating.rate} />
                 <p style={{ margin: "0px", color: "#cccccc" }}>

@@ -22,30 +22,22 @@ const Card = (props: CardProps) => {
       >
         <div className={style.card}>
           <Image
-            // className={style.card_image}
+            className={style.card_image}
             src={image}
             width={180}
             height={120}
             alt="product-image"
           />
           <div className={style.card_body}>
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                alignItems: "center",
-                justifyContent: "space-between",
-              }}
-            >
+            <div className={style.card_btn}>
+              <FaShoppingCart style={{ backgroundColor: "inherit" }} />
+              <Button name="Add To Cart" size="sm" />
+            </div>
+            <div style={styleIn.rating}>
               <Rating size={15} readonly initialValue={rating.rate} />
               <p style={{ margin: "0px", color: "#cccccc" }}>
                 ({rating.count} Reviews)
               </p>
-            </div>
-
-            <div className={style.card_btn}>
-              <FaShoppingCart style={{ backgroundColor: "inherit" }} />
-              <Button name="Add To Cart" size="sm" />
             </div>
           </div>
           <div className={style.wish_list}>
@@ -74,6 +66,13 @@ const styleIn = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+  },
+  rating: {
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "space-between",
+    margin: "6px 0px",
   },
 };
 export default Card;
