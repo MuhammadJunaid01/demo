@@ -12,7 +12,7 @@ const CustomerSay = (props: CustomerSayProps) => {
     setIndex(selectedIndex);
   };
   return (
-    <div style={{ textAlign: "center", margin: "10px" }}>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
       <Container>
         <h1>{heading}</h1>
         <Carousel
@@ -35,14 +35,14 @@ const CustomerSay = (props: CustomerSayProps) => {
                 key={index}
                 style={{
                   width: "100%",
-                  height: "400px",
+                  height: "300px",
                   position: "relative",
                 }}
               >
                 <div
                   style={{
                     position: "absolute",
-                    top: "30%",
+                    top: "20%",
                     left: "50%",
                     transform: "translate(-50%, 50%)",
                   }}

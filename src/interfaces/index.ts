@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
+import { BologTypes } from "types";
 export interface MainLayOuteProps {
   children: ReactNode;
 }
@@ -58,4 +59,9 @@ export interface CustomerSayProps {
     info: string;
     name: string;
   }[];
+}
+
+export interface BlogsProps {
+  heading: string;
+  blog: BologTypes[];
 }
