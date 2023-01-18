@@ -7,13 +7,11 @@ const index = () => {
   const router = useRouter();
   const { productId } = router.query;
   const { data, error, isLoading } = useGetSingleProductQuery(productId);
-  if (isLoading) {
-    return <Loader />;
-  }
+
   return (
     <div>
       <MainLayoute>
-        <Product product={data} />
+        {isLoading ? <Loader /> : <Product product={data} />}
       </MainLayoute>
     </div>
   );

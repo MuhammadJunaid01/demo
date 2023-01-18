@@ -50,3 +50,12 @@ export interface ButtonProps {
 
   action?: () => void;
 }
+export interface CustomerSayProps {
+  heading: string;
+  review: {
+    img: string | StaticImageData;
+    title: string;
+    info: string;
+    name: string;
+  }[];
+}

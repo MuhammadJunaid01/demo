@@ -8,12 +8,12 @@
   --color-primary: #333333;
   --color-secoundary: #777777;
   --color-orange-300: #cc9966;
+  --color-gray-200: rgba(128, 128, 128, 0.514);
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #ffffff;
   font-family: Poppins, sans-serif;
 }
 

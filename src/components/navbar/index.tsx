@@ -41,7 +41,7 @@ const MenuBar = () => {
             <div className="search_box">
               <input type="text" placeholder="Search in..." />
               <p onClick={() => setShow((prev) => !prev)}>
-                <FaSearch />
+                <FaSearch style={{ color: "var(--color-gray-200)" }} />
               </p>
             </div>
           </Navbar.Collapse>
