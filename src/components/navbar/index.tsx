@@ -1,3 +1,5 @@
+import { getSearch } from "@/redux/slices/product.slice";
+import { isSearch } from "@/redux/slices/search.slice";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -5,9 +7,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FaSearch } from "react-icons/fa";
+import { useDispatch } from "react-redux";
 const MenuBar = () => {
   const [show, setShow] = useState(false);
   const router = useRouter();
+  const dispatch = useDispatch();
   const handleLink = () => {
     router.push("/");
   };
@@ -39,7 +43,12 @@ const MenuBar = () => {
               </Link>
             </Nav>
             <div className="search_box">
-              <input type="text" placeholder="Search in..." />
+              <input
+                onFocus={() => dispatch(isSearch())}
+                onChange={(e) => dispatch(getSearch(e.target.value))}
+                type="text"
+                placeholder="Search in..."
+              />
               <p onClick={() => setShow((prev) => !prev)}>
                 <FaSearch style={{ color: "var(--color-gray-200)" }} />
               </p>

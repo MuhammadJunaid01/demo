@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import { productApi } from "../api";
-import productSlice from "../api/slices/product.slice";
+import productSlice from "../slices/product.slice";
+import searchSlice from "./../slices/search.slice";
 
 export const store = configureStore({
   reducer: {
     product: productSlice,
+    search: searchSlice,
     [productApi.reducerPath]: productApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
