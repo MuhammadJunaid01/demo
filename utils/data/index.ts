@@ -58,3 +58,25 @@ export const blog = [
     title: "Sed adipiscing ornare.",
   },
 ];
+export const useFullLinks = [
+  "About Demo",
+  "How to shop on Demo",
+  "FAQ",
+  "Log in",
+];
+export const customerService = [
+  "Payment Methods",
+  "Money-back guarantee!",
+  "Returns",
+  "Shipping",
+  "Terms and conditions",
+  "Privacy Policy",
+];
+
+export const terms = [
+  "Sign In",
+  "View Cart",
+  "My Wishlist",
+  "Track My Order",
+  "Help",
+];
