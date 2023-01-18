@@ -1,4 +1,4 @@
-import { createSlice, current, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { WritableDraft } from "immer/dist/internal";
 interface ProductType {
   products: {
@@ -27,20 +27,21 @@ export const productSlice = createSlice({
   reducers: {
     getProducts: (
       state,
-      action: PayloadAction<{
-        category: string;
-        description: string;
-        id: 1;
-        image: string;
-        price: number;
-        rating: { rate: number; count: number };
-        title: string;
-      }>
+      action: PayloadAction<
+        {
+          category: string;
+          description: string;
+          id: 1;
+          image: string;
+          price: number;
+          rating: { rate: number; count: number };
+          title: string;
+        }[]
+      >
     ) => {
       if (action.payload == undefined) {
         return;
       }
-      const vSta = current(state);
       action.payload.map(
         (
           data: WritableDraft<{
