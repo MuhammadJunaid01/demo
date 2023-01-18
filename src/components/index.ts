@@ -10,7 +10,7 @@ import Loader from "./loader";
 import MenuBar from "./navbar";
 import Product from "./product";
 import Products from "./products";
-
+import SearchBox from "./search_box";
 export {
   MenuBar,
   Footer,
@@ -24,4 +24,5 @@ export {
   CustomerSay,
   Blogs,
   Blog,
+  SearchBox,
 };

@@ -1,6 +1,13 @@
-import { Blogs, Button, CustomerSay, HeroBanner, Products } from "@/components";
+import {
+  Blogs,
+  Button,
+  CustomerSay,
+  HeroBanner,
+  Products,
+  SearchBox,
+} from "@/components";
 import { useGetProductQuery } from "@/redux/api";
-import { getProducts } from "@/redux/api/slices/product.slice";
+import { getProducts } from "@/redux/slices/product.slice";
 import MensFashion from "public/banner-2.jpg";
 import Womens from "public/banner-4 .jpg";
 import { useEffect } from "react";
@@ -44,6 +51,7 @@ const HomePage = () => {
       />
       <Blogs heading="FROM OUR BLOG" blog={blog} />
       <CustomerSay heading="OUR CUSTOMERS SAY" review={review} />
+      <SearchBox />
     </>
   );
 };
