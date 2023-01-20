@@ -7,7 +7,10 @@ import { Rating } from "react-simple-star-rating";
 import style from "../../styles/card.module.css";
 import { Button } from "../index";
 
+/* A function that takes in a parameter called props and it is of type CardProps. */
+
 const Card = (props: CardProps) => {
+  /* Destructuring the props object. */
   const { breakPoints, image, title, rating, id, price } = props;
   return (
     <Col
@@ -22,6 +25,7 @@ const Card = (props: CardProps) => {
       >
         <div className={style.card}>
           <Image
+            style={{ width: "100%" }}
             className={style.card_image}
             src={image}
             width={180}

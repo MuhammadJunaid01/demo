@@ -2,11 +2,14 @@ import { Button } from "@/components";
 import Image from "next/image";
 import { Col } from "react-bootstrap";
 import { BologTypes } from "types";
+/* A React component. */
 const Blog = (props: BologTypes) => {
+  /* Destructuring the props object. */
   const { title, comments, img, date } = props;
   return (
     <Col style={{ marginBottom: "11px" }} sm={12} md={4} lg={3}>
       <div
+        /* A style object that is used to style the component. */
         style={{
           textAlign: "center",
           width: "100%",
@@ -17,6 +20,7 @@ const Blog = (props: BologTypes) => {
           cursor: "pointer",
         }}
       >
+        {/* A component from the next.js library. It is used to load images.  */}
         <Image width={317} height={221} src={img} alt="blog-image" />
         <div>
           <div style={style.comments}>
@@ -46,6 +50,7 @@ const Blog = (props: BologTypes) => {
     </Col>
   );
 };
+/* A constant variable that is used to store the style of the component. */
 const style = {
   comments: {
     display: "flex",

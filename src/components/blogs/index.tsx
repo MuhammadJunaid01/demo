@@ -1,7 +1,10 @@
+/* Importing the components and interfaces. */
 import { Blog } from "@/components";
 import { BlogsProps } from "@/interfaces";
 import { Container, Row } from "react-bootstrap";
+
 const Blogs = (props: BlogsProps) => {
+  /* Destructuring the props. */
   const { heading, blog } = props;
   return (
     <Container>
@@ -10,6 +13,7 @@ const Blogs = (props: BlogsProps) => {
         <Row>
           {blog?.map(({ date, comments, title, img }, index) => {
             return (
+              /* A component that is being rendered. */
               <Blog
                 key={index}
                 date={date}
@@ -24,6 +28,7 @@ const Blogs = (props: BlogsProps) => {
     </Container>
   );
 };
+/* A constant variable that is used to style the heading. */
 const style = {
   heading: {
     fontSize: "20px",

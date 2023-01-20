@@ -6,6 +6,7 @@ const HeroBanner = (props: HeroBannerProps) => {
   return (
     <div className={style.hero_container}>
       <Image
+        style={{ width: "100%" }}
         className={style.hero_image}
         src={image}
         width={800}

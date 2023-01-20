@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { WritableDraft } from "immer/dist/internal";
+/* Defining the shape of the data that will be stored in the redux store. */
 interface ProductType {
   products: {
     category: string;
@@ -25,7 +26,9 @@ export const productSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
+    /* A reducer function. */
     getProducts: (
+      /* A type of action.payload. */
       state,
       action: PayloadAction<
         {
@@ -39,9 +42,11 @@ export const productSlice = createSlice({
         }[]
       >
     ) => {
+      /* Checking if the payload is undefined. If it is, it returns. */
       if (action.payload == undefined) {
         return;
       }
+      /* Pushing the data from the payload into the products array. */
       action.payload.map(
         (
           data: WritableDraft<{
@@ -54,12 +59,12 @@ export const productSlice = createSlice({
             title: string;
           }>
         ) => {
-          state.products.push(data);
+          return state.products.push(data);
         }
       );
     },
+    /* Filtering the products array and pushing the filtered data into the searchRes array. */
     getSearch: (state, action) => {
-      state.searchRes.splice(0, state.searchRes.length);
       const res = state.products.filter((item) => {
         return item.category
           .toLowerCase()
@@ -70,5 +75,6 @@ export const productSlice = createSlice({
     },
   },
 });
+/* Exporting the actions and reducer. */
 export const { getProducts, getSearch } = productSlice.actions;
 export default productSlice.reducer;
